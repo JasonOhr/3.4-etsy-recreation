@@ -1,0 +1,9 @@
+$dark-color: rgba(40, 0, 0, 1);
+$blue-color: rgba(76, 161, 196, 1);
+$lighter-gray: rgba(245, 245, 241, 1);
+$light-gray: rgba(203, 204, 201, 1);
+$green-color: rgba(145, 192, 66, 1);
+
+@mixin border() {
+  border: 1px solid $light-gray;
+}

@@ -1,0 +1,87 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../bower_components/neat/app/assets/stylesheets/neat';
+
+@import "variables";
+
+body {
+  background-color: $lighter-gray;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+header {
+  background-color: #fff;
+  width: 100%;
+  height: 80px;
+}
+.header-info {
+  @include outer-container(980px);
+}
+.search-box{
+  
+}
+.search-box-button {
+
+}
+
+.browse-button {
+  color: $dark-color;
+}
+.sign-in-button {
+  color: $blue-color;
+}
+.cart {
+  border-left: 1px solid;
+}
+.info-box {
+  height: 70px;
+}
+aside {
+  @include span-columns(3)
+
+}
+.categories {
+  min-height: 400px;
+  background-color: #fff;
+  @include border;
+}
+h5{
+  color: $dark-color;
+  font-weight: 400;
+  margin: 0;
+}
+.category-list ul{
+  color: $blue-color;
+  text-decoration: none;
+}
+.container {
+  @include outer-container(980px)
+}
+.product {
+  @include span-columns(3);
+  background-color: #fff;
+  border: 1px solid $light-gray;
+
+
+}
+
+.product img {
+  width: 100%;
+  background-color: $lighter-gray;
+  height: 220px;
+  border: none;
+}
+.product-info {
+  padding: 8px;
+}
+.source {
+  color: $light-gray;
+
+  font-size: 12px;
+}
+.price {
+  font-size: 12px;
+  color: $green-color;
+  float:right;
+  //margin: 0 5px 8px 0
+}
