@@ -69,24 +69,41 @@ h5 {
     content: "";
     display: table; }
 
-.product {
+.products {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%;
+  width: 74.41059%; }
+  .products:last-child {
+    margin-right: 0; }
+
+.product {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 31.22104%;
   background-color: #fff;
-  border: 1px solid #cbccc9; }
+  border: 1px solid #cbccc9;
+  margin-bottom: 20px; }
   .product:last-child {
     margin-right: 0; }
+  .product:nth-child(3n) {
+    margin-right: 0; }
+  .product:nth-child(3n+1) {
+    clear: left; }
 
 .product img {
   width: 100%;
   background-color: #f5f5f1;
-  height: 220px;
+  max-height: 160px;
   border: none; }
 
 .product-info {
   padding: 8px; }
+
+.description {
+  overflow-x: hidden;
+  height: 16px; }
 
 .source {
   color: #cbccc9;

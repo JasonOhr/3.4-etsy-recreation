@@ -57,22 +57,30 @@ h5{
 .container {
   @include outer-container(980px)
 }
+.products {
+  @include span-columns(9);
+}
 .product {
-  @include span-columns(3);
+  @include span-columns(3 of 9);
+  @include omega(3n);
   background-color: #fff;
   border: 1px solid $light-gray;
-
+  margin-bottom: 20px;
 
 }
 
 .product img {
   width: 100%;
   background-color: $lighter-gray;
-  height: 220px;
+  max-height: 160px;
   border: none;
 }
 .product-info {
   padding: 8px;
+}
+.description {
+  overflow-x: hidden;
+  height: 16px;
 }
 .source {
   color: $light-gray;

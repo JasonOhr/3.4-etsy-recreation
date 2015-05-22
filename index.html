@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-<script src="main.js"></script>
+
 <header>
        <div class="header-info">
            <span class="logo"><img src="assets/etsy-logo.png" alt=""/></span>
@@ -28,38 +28,28 @@
         </section>
     </aside>
     <section class="products">
-        <div class="product">
-            <img src="" alt=""/>
 
-            <div class="product-info">
-                <h5 class="description">Personalized Whiskey Barrel</h5>
-                <span class="source">RcPersonalized</span>
-                <span class="price">$52.49 USD</span>
-            </div>
 
-        </div>
-        <div class="product">
-            <img src="" alt=""/>
-
-            <div class="product-info">
-                <h5 class="description">Personalized Whiskey Barrel</h5>
-                <span class="source">RcPersonalized</span>
-                <span class="price">$52.49 USD</span>
-            </div>
-
-        </div>
-        <div class="product">
-            <img src="" alt=""/>
-
-            <div class="product-info">
-                <h5 class="description">Personalized Whiskey Barrel</h5>
-                <span class="source">RcPersonalized</span>
-                <span class="price">$52.49 USD</span>
-            </div>
-
-        </div>
     </section>
 
 </section>
+<script id="products-template" type="text/x-handlebars-template">
+
+    <div class="product">
+
+        <img src="{{productImage}}" alt=""/>
+
+        <div class="product-info">
+            <h5 class="description">{{checkTitle title}}</h5>
+            <span class="source">{{Shop.shop_name}}</span>
+            <span class="price">${{price}} USD</span>
+        </div>
+
+    </div>
+
+</script>
+<script src="bower_components/handlebars/handlebars.js"></script>
+
+<script src="main.js"></script>
 </body>
 </html>
