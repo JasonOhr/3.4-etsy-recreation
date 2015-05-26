@@ -1,13 +1,13 @@
 -set up project:
-- [ ] bower init
-- [ ] bower install handlebars neat bourbon
-- [ ] basic HTML
-- [ ] basic SCSS
-- [ ] 
-- [ ] Utilize the data for whatever search term you use - DATA HERE
-- [ ] Use Bourbon / Neat to help you out (optional, but suggested)
-- [ ] You are free to change the search term to whatever you'd like.
-- [ ] We haven't covered how to fetch data using JavaScript, so just copy the function done during the Marvel demo.
+- [x] bower init
+- [x] bower install handlebars neat bourbon
+- [x] basic HTML
+- [x] basic SCSS
+- [x] 
+- [x] Utilize the data for whatever search term you use - DATA HERE
+- [x] Use Bourbon / Neat to help you out (optional, but suggested)
+- [x] You are free to change the search term to whatever you'd like.
+- [x] We haven't covered how to fetch data using JavaScript, so just copy the function done during the Marvel demo.
 - [ ] Everything should be styled as closely as possible, including the Header/Footer
 - [ ] You should implement hover events and link the items to their proper Etsy product pages
 - [ ] Unless you do the bonus question #2, you can just put random links in your sidebar.

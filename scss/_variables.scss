@@ -1,9 +1,61 @@
-$dark-color: rgba(40, 0, 0, 1);
+$dark-color: #555555;
 $blue-color: rgba(76, 161, 196, 1);
 $lighter-gray: rgba(245, 245, 241, 1);
 $light-gray: rgba(203, 204, 201, 1);
 $green-color: rgba(145, 192, 66, 1);
+$button-blue: rgba(52, 168, 196, 1);
+$medium-gray: rgba(187, 187, 187, 1);
 
+$border-color: $light-gray;
 @mixin border() {
-  border: 1px solid $light-gray;
+  border: 1px solid $border-color;
+}
+@mixin border-blue(){
+  border: 1px solid $blue-color;
+}
+@mixin blue-white(){
+  margin-left: -5px;
+  border: 1px solid rgba(39, 127, 148, 1);
+  color: #ffffff;
+  background-color: $button-blue;
+
+}
+
+@mixin white-gray(){
+  background-color: #fff;
+  font-weight: normal;
+  color: $dark-color;
+  @include border;
+}
+@mixin white-blue(){
+  background-color: #fff;
+  font-weight: normal;
+  color: $blue-color;
+  @include border-blue;
+}
+
+@mixin button() {
+
+
+  width: 80px;
+  font-size: 14px;
+  font-weight: bold;
+
+
+
+}
+
+@mixin shadow-bottom() {
+  box-shadow: 0 0 5px rgb(219, 219, 219);
+  border-bottom: 1px solid $border-color;
+}
+@mixin with-radius(){
+  @include border;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+@mixin shadow-box() {
+  box-shadow: 0 0 2px $light-gray;
+  border-bottom: 1px solid $border-color;
 }

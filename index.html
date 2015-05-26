@@ -10,21 +10,105 @@
 <header>
        <div class="header-info">
            <span class="logo"><img src="assets/etsy-logo.png" alt=""/></span>
+           <span class="header-info-box">
+               <input type="search" name="search-input" id="search-input"/>
+               <button class="search-box-button" name="search-button">Search</button>
+                <button class="browse-button" name="browse-button">Browse<span class="triangle"></span></button>
+           </span>
+           <span class="login">
+           <a href="#" class="register">Register</a>
+           <button class="sign-in-button">Sign In</button>
+           <span class="cart"><img src="assets/cart.png" alt=""/></span>
+           </span>
        </div>
 </header>
 
 <section class="container">
     <section class="info-box">
+        <h5>Show Categories for:</h5>
+        <div class="sort-conditions">
+        <span class="breadcrumbs">All Categories<span class="breadcrumb-location">  &gt; "whiskey" (21,000 Results)</span></span>
+        <span class="sort-by">Sort by: <span>Relevancy</span></span>
 
+        </div>
     </section>
     <aside>
 
         <nav class="categories">
-            <h4>All Categories</h4>
+            <h5>All Categories</h5>
             <ul class="category-list"></ul>
         </nav>
-        <section>
-            <h4>Refine your search</h4>
+        <h5 class="search-h5">Refine your search</h5>
+        <section class="refine-search">
+            <h5>Item Type</h5>
+            <ul class="refine-ul">
+                <li>
+                    <input type="radio" name="refine-search" value="all-items" id="all-items" checked/>
+                    <label for="all-items"><span><span class="radio-button"></span></span>All Items</label>
+                </li>
+                <li>
+                    <input type="radio" name="refine-search" value="handmade" id="handmade"/>
+                    <label for="handmade"><span><span class="radio-button"></span></span>Handmade</label>
+                </li>
+                <li>
+                    <input type="radio" name="refine-search" value="vintage" id="vintage"/>
+                    <label for="vintage"><span><span class="radio-button"></span></span>Vintage</label>
+                </li>
+            </ul>
+
+            <section class="price-range">
+                <h5>Price</h5>
+                <span class="price-range-box lo">$<input type="text" class="low" value="Low"/></span>
+
+                <span class="price-range-box hi">$<input type="text" class="high" value="High"/></span>
+                <button ><span class="search-price-range"></span></button>
+            </section>
+            <section class="filter-by-color">
+                <h5>Filter By Color</h5>
+                <ul>
+                    <li class="color-filter-1"></li>
+                    <li class="color-filter-2"></li>
+                    <li class="color-filter-3"></li>
+                    <li class="color-filter-4"></li>
+                    <li class="color-filter-5"></li>
+                    <li class="color-filter-6"></li>
+                    <li class="color-filter-7"></li>
+                    <li class="color-filter-8"></li>
+                </ul>
+            </section>
+            <section class="ordering-options">
+                <h5>Ordering Options</h5>
+                <ul>
+                    <li ><input type="checkbox" value="etsy-gift-cards"> Accepts Etsy Gift Cards</li>
+                    <li ><input type="checkbox" value="customizable"> Customizable</li>
+
+                </ul>
+            </section>
+            <section class="shop-location">
+            <h5>Item Type</h5>
+            <ul class="shop-location-ul">
+                <li>
+                    <input type="radio" name="shop-location-search" value="anywhere" id="anywhere" checked/>
+                    <label for="anywhere"><span><span class="radio-button"></span></span>Anywhere</label>
+                </li>
+                <li>
+                    <input type="radio" name="shop-location-search" value="united-states" id="united-states"/>
+                    <label for="united-states"><span><span class="radio-button"></span></span>United States</label>
+                </li>
+
+            </ul>
+            <div class="choose-custom-location"><a href="#">Choose a custom location</a></div>
+            </section>
+            <section class="ship-to">
+                <h5>Ship to</h5>
+                <div class="select-shipping">
+                <select name="select" >
+                    <option value="united-states">United States</option>
+                    <option value="bvi">British Virgin Islands</option>
+                    <option value="australia">Australia</option>
+                </select>
+                </div>
+            </section>
         </section>
     </aside>
     <section class="products">
@@ -37,16 +121,19 @@
 
     <div class="product">
 
-        <img src="{{productImage}}" alt=""/>
+        <a href="{{url}}"><img src="{{productImage}}" alt=""/></a>
 
         <div class="product-info">
-            <h5 class="description">{{checkTitle title}}</h5>
-            <span class="source">{{Shop.shop_name}}</span>
+            <h5 class="description"><a href="{{url}}">{{title}}</a></h5>
+            <span class="source"><a href="{{Shop.url}}">{{Shop.shop_name}}</a></span>
             <span class="price">${{price}} USD</span>
         </div>
 
     </div>
 
+</script>
+<script id="category-template" type="text/x-handlebars-template">
+    {{categoryList}}
 </script>
 <script src="bower_components/handlebars/handlebars.js"></script>
 
