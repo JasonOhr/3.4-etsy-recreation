@@ -10,12 +10,27 @@
         var products = httpReturn.results;
         displayProducts(products, $productElement,"#products-template");
         categories = pluck(products);
+        categories = flatten(categories);
+        console.log('post flatten, categories is', categories);
+
         displayProducts(products, $categoriesElement, "#category-template");
     }
 
     function pluck(products){
-        products.map(function(item){
+       return products.map(function(item){
             return item.category_path;
+        });
+    }
+    function flatten(items){
+        //console.log(items);
+        return items.reduce(function(a,b){
+            return a.concat(b);
+
+        })
+    }
+    function reduceArray(items){
+        return items.reduce(function(items){
+
         });
     }
 
@@ -76,7 +91,7 @@
         window[callbackName] = function(data) {
             delete window[callbackName];
             document.body.removeChild(script);
-            callback(data);
+            callback(data);//here, we'll going to call app
         };
 
         script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
